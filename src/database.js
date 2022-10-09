@@ -5,7 +5,7 @@ const database = new Sequelize(
     process.env.DB_USER || 'program',
     process.env.DB_PASSWORD || 'test',
     {
-        host: process.env.DB_HOST || 'host.docker.internal',
+        host: process.env.DB_HOST || 'localhost',
         port: process.env.DB_PORT || 5432,
         dialect: 'postgres'
     }
