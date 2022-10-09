@@ -1,14 +1,5 @@
 const Sequelize = require('sequelize');
 
-const database = new Sequelize(
-    process.env.DB_SCHEMA || 'persons',
-    process.env.DB_USER || 'program',
-    process.env.DB_PASSWORD || 'test',
-    {
-        host: process.env.DB_HOST || 'localhost',
-        port: process.env.DB_PORT || 5432,
-        dialect: 'postgres'
-    }
-);
+const database = new Sequelize(process.env.DATABASE_URL || "postgres://program:test@localhost:5432/persons");
 
 module.exports = database;
